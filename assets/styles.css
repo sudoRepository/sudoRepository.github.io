@@ -1,0 +1,108 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f6f2;
+  --surface: #ffffff;
+  --ink: #252b2a;
+  --muted: #56615c;
+  --line: #d8ded8;
+  --accent: #285b47;
+  --soft: #edf3ee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 100%;
+  line-height: 1.75;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1.5rem; }
+body { margin: 0; color: var(--ink); background: var(--paper); }
+a { color: var(--accent); text-underline-offset: .2em; text-decoration-thickness: .08em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: .15em; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+h1, h2, h3, p, ul, ol, dl { margin-top: 0; }
+h1, h2, h3 { line-height: 1.35; letter-spacing: -.035em; overflow-wrap: anywhere; }
+h1 { font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; margin-bottom: 1rem; }
+h3 { font-size: 1.12rem; margin-bottom: .75rem; }
+p, li, dd { overflow-wrap: break-word; word-break: normal; }
+p { margin-bottom: 1rem; }
+ul, ol { padding-left: 1.35rem; }
+li + li { margin-top: .5rem; }
+[id] { scroll-margin-top: 1.5rem; }
+.wrap { width: min(100% - 3rem, 70rem); margin-inline: auto; }
+.skip-link { position: absolute; top: .75rem; left: .75rem; transform: translateY(-180%); padding: .75rem 1rem; background: var(--surface); z-index: 2; }
+.skip-link:focus { transform: translateY(0); }
+.site-header { border-bottom: 1px solid var(--line); }
+.header-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
+.brand { font-weight: 700; color: var(--ink); text-decoration: none; }
+.header-links { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
+.header-links a, .language-links a { display: inline-flex; min-height: 2.75rem; align-items: center; }
+.hero { padding-block: clamp(2.5rem, 7vw, 5rem) 2.5rem; max-width: 52rem; }
+.eyebrow { color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .75rem; }
+.lead { font-size: 1.12rem; color: var(--muted); max-width: 44rem; }
+.muted { color: var(--muted); }
+.meta { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-block: 1.5rem 0; font-size: .9rem; color: var(--muted); }
+.project-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+.project-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1.5rem; background: var(--surface); padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid var(--line); border-radius: .75rem; }
+.project-card h2 { margin-block: .75rem .5rem; }
+.project-card p:last-child { margin-bottom: 0; }
+.tag { display: inline-block; background: var(--soft); color: var(--accent); border: 1px solid var(--line); border-radius: 2rem; padding: .15rem .75rem; font-size: .8rem; font-weight: 600; }
+.action { display: inline-flex; min-height: 2.75rem; justify-content: center; align-items: center; gap: .5rem; padding: .65rem 1.1rem; border: 1px solid var(--accent); border-radius: .35rem; text-decoration: none; font-weight: 600; }
+.action:hover { background: var(--soft); }
+.note { padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--soft); }
+.note p:last-child { margin-bottom: 0; }
+.policy-layout { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 3rem; align-items: start; padding-bottom: 4rem; }
+.policy-nav { border-top: 2px solid var(--accent); padding-top: 1rem; font-size: .9rem; }
+.policy-nav h2 { font-size: 1rem; margin-bottom: .75rem; }
+.policy-nav ol { padding-left: 1.25rem; }
+.policy-nav a { display: inline-block; padding-block: .25rem; }
+.policy-nav .nav-group + .nav-group { border-top: 1px solid var(--line); margin-top: 1.5rem; padding-top: 1.5rem; }
+.language-links { display: flex; gap: 1.5rem; margin-top: 1.25rem; }
+.policy-body { min-width: 0; }
+.policy-language { background: var(--surface); border: 1px solid var(--line); border-radius: .75rem; padding: clamp(1.25rem, 4vw, 2.5rem); }
+.policy-language + .policy-language { margin-top: 2rem; }
+.language-heading { padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
+.language-heading h2 { margin-bottom: .5rem; }
+.language-heading p { margin-bottom: 0; }
+.policy-section + .policy-section { margin-top: 2.25rem; }
+.data-list { margin-bottom: 1rem; }
+.data-list div { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.data-list div:first-child { padding-top: 0; }
+.data-list dt { font-weight: 700; margin-bottom: .25rem; }
+.data-list dd { margin: 0; }
+.contact-box { padding: 1rem 1.25rem; background: var(--soft); border: 1px solid var(--line); border-radius: .35rem; }
+.contact-box p:last-child { margin-bottom: 0; }
+.site-footer { border-top: 1px solid var(--line); padding-block: 1.75rem; font-size: .85rem; color: var(--muted); }
+.site-footer p { margin-bottom: .5rem; }
+.site-footer p:last-child { margin-bottom: 0; }
+
+@media (max-width: 52rem) {
+  .policy-layout { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .policy-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .policy-nav .nav-group + .nav-group { border: 0; margin: 0; padding: 0; }
+}
+
+@media (max-width: 35rem) {
+  .wrap { width: calc(100% - 2rem); }
+  .project-card { grid-template-columns: minmax(0, 1fr); }
+  .project-card .action { justify-self: start; }
+  .policy-nav { grid-template-columns: minmax(0, 1fr); }
+  .policy-nav .nav-group + .nav-group { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+  .lead { font-size: 1rem; }
+}
+
+@media print {
+  :root { color: #000; background: #fff; font-size: 10pt; }
+  body { background: #fff; }
+  .wrap { width: 100%; }
+  .skip-link, .header-links, .policy-nav, .language-links, .back-to-top { display: none; }
+  .hero { padding-block: 1rem; }
+  .policy-layout { display: block; padding-bottom: 0; }
+  .policy-language { padding: 0; border: 0; border-radius: 0; }
+  .policy-language + .policy-language { break-before: page; }
+  h2, h3, dt { break-after: avoid; }
+  p, li, dd { orphans: 3; widows: 3; }
+  .note, .contact-box, .project-card { background: #fff; border-color: #777; }
+  .site-footer { margin-top: 1rem; padding-block: 1rem; }
+  a { color: #000; }
+  a[href^="https://"]::after { content: " (" attr(href) ")"; font-size: .8em; overflow-wrap: anywhere; }
+}
